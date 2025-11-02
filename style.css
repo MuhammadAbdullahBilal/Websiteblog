@@ -1,0 +1,492 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(135deg, #121212, #1a1a40);
+    color: white;
+    min-height: 100vh;
+  }
+  
+  /* Header & Navbar */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 60px;
+    background: #0d0d1a;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  }
+  
+  .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #00ffff;
+    text-shadow: 0 0 10px #00ffff;
+  }
+  
+  .navbar a {
+    text-decoration: none;
+    color: #fff;
+    margin: 0 15px;
+    position: relative;
+    font-size: 1em;
+    transition: all 0.3s ease;
+  }
+  
+  /* 3D Hover Effect */
+  .navbar a::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background: #00ffff;
+    bottom: -6px;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
+  }
+  
+  .navbar a:hover::before {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+  
+  .navbar a:hover {
+    color: #00ffff;
+    transform: translateY(-2px) scale(1.05);
+    text-shadow: 0 0 10px #00ffff;
+  }
+  
+  /* Hero Section */
+  .hero {
+    text-align: center;
+    padding: 100px 20px;
+  }
+  
+  .hero h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    text-shadow: 0 0 10px #00ffff;
+  }
+  
+  .hero p {
+    font-size: 1.1em;
+    color: #ddd;
+  }
+  .slideshow {
+    width: 150%;
+    max-width: 800px;
+    height: 550px;
+    margin: 40px auto;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+  }
+  
+  .slide {
+    position: absolute;
+    width: 1150px;
+    height: 100%;
+    opacity: 0;
+    animation: fade 12s infinite;
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .slide1 {
+    background-image: url("images (1).jpeg");
+    animation-delay: 0s;
+  }
+  
+  .slide2 {
+    background-image: url("images.jpeg");
+    animation-delay: 4s;
+  }
+  
+  .slide3 {
+    background-image: url("images.png");
+    animation-delay: 8s;
+  }
+  
+  @keyframes fade {
+    0%   { opacity: 0; }
+    8%   { opacity: 1; }
+    33%  { opacity: 1; }
+    41%  { opacity: 0; }
+    100% { opacity: 0; }
+  }
+
+  .container {
+    max-width: 800px;
+    margin: 50px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    text-align: center;
+  }
+  
+  /* Image */
+  .main-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+  
+  /* Heading */
+  h1 {
+    color: #333;
+    margin-bottom: 15px;
+  }
+  
+  /* Paragraphs */
+  .paragraphs p {
+    color: #555;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+  }
+  .footer {
+    background-color: #004a80;
+    color: white;
+    padding: 0;
+  }
+  
+  .top-bar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #002f55;
+    padding: 15px 20px;
+    gap: 10px;
+  }
+  
+  .social-icon {
+    font-size: 22px;
+    background-color: white;
+    color: #004a80;
+    border-radius: 5px;
+    padding: 5px 8px;
+    font-weight: bold;
+  }
+  
+  .newsletter-text {
+    font-size: 18px;
+    flex: 1;
+    min-width: 200px;
+  }
+  
+  .newsletter-form {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  
+  .newsletter-form input {
+    padding: 10px;
+    border: none;
+    border-radius: 3px;
+    width: 250px;
+    max-width: 100%;
+  }
+  
+  .newsletter-form button {
+    background-color: #fbd400;
+    color: #000;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 3px;
+  }
+  
+  .footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 30px 20px;
+    gap: 20px;
+  }
+  
+  .footer-column {
+    flex: 1 1 200px;
+    min-width: 200px;
+  }
+  
+  .footer-column h3 {
+    font-size: 16px;
+    border-bottom: 1px solid white;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+  }
+  
+  .footer-column ul {
+    list-style: none;
+    padding: 0;
+    line-height: 1.8;
+  }
+  
+  .about h2 {
+    font-size: 20px;
+  }
+  
+  .about h2 strong {
+    background-color: #fbd400;
+    color: black;
+    padding: 2px 6px;
+  }
+  
+  .contact p {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  
+  /* Responsive Settings */
+  @media screen and (max-width: 768px) {
+    .top-bar {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .newsletter-form {
+      width: 100%;
+      flex-direction: column;
+    }
+  
+    .newsletter-form input,
+    .newsletter-form button {
+      width: 100%;
+    }
+  
+    .footer-content {
+      flex-direction: column;
+    }
+  
+    .footer-column {
+      width: 100%;
+    }
+  }
+  .intro{
+    text-align:center;
+    margin-bottom:40px;
+  }
+  .title{
+    margin:0;
+    font-size:28px;
+    letter-spacing:1px;
+    font-weight:600;
+  }
+  .divider{
+    width:80px;
+    height:2px;
+    background:#222;
+    margin:14px auto;
+    opacity:0.85;
+  }
+  .lead{
+    margin:12px auto 0;
+    max-width:680px;
+    color:var(--muted);
+    font-size:14px;
+    line-height:1.6;
+  }
+  
+  /* Grid */
+  .team-grid{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:34px;
+    align-items:start;
+    margin:28px 0 44px;
+  }
+  
+  /* Member card shape */
+  .member-card{
+    position:relative;
+    padding-top:64px; /* space for circular photo overlap */
+    display:flex;
+    justify-content:center;
+  }
+  
+  /* circular photo that overlaps card */
+  .photo-wrap{
+    position:absolute;
+    top:0;
+    left:50%;
+    transform:translateX(-50%);
+    width:116px;
+    height:116px;
+    margin:0;
+    border-radius:50%;
+    background:linear-gradient(180deg,#fff, #f0f3f6);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    box-shadow:0 6px 18px rgba(3,6,23,0.12);
+    z-index:3;
+    border:6px solid rgba(255,255,255,0.9);
+    overflow:hidden;
+  }
+  .photo-wrap img{
+    display:block;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+  }
+  
+  /* The dark card panel with special rounded/cut corners */
+  .card-body{
+    width:100%;
+    background:var(--navy);
+    color:var(--white);
+    padding: var(--card-pad);
+    padding-top:58px; /* extra so photo overlaps neatly */
+    border-radius:24px;
+    box-shadow: 0 8px 18px rgba(11,20,48,0.12);
+    position:relative;
+    overflow:visible;
+    min-height:320px;
+    /* create the 'D' or truncated bottom-right corner via pseudo elements */
+  }
+  
+  .member-card:nth-child(1) .card-body::after,
+  .member-card:nth-child(2) .card-body::after,
+  .member-card:nth-child(3) .card-body::after{
+    content:"";
+    position:absolute;
+    right:-18px;
+    bottom:-18px;
+    width:140px;
+    height:140px;
+    background:var(--navy);
+    border-radius:50%;
+    z-index:1;
+    box-shadow: none;
+    transform:translate(0,0);
+  }
+  
+  /* Slight left notch to mimic the image cut on left-most card */
+  .member-card:nth-child(1) .card-body::before{
+    content:"";
+    position:absolute;
+    left:-26px;
+    bottom:36px;
+    width:36px;
+    height:70px;
+    background:var(--navy);
+    border-radius:10px;
+    transform:skewY(-6deg);
+  }
+  
+  /* Content inside the dark card */
+  .name{
+    margin:0;
+    font-size:16px;
+    font-weight:700;
+    letter-spacing:0.6px;
+    text-transform:uppercase;
+  }
+  .tagline{
+    margin:6px 0 12px;
+    font-size:12px;
+    color:rgba(255,255,255,0.92);
+    opacity:0.9;
+    font-weight:600;
+  }
+  .bio{
+    margin:0 0 18px;
+    font-size:13px;
+    line-height:1.55;
+    color:rgba(255,255,255,0.85);
+    max-width:220px;
+  }
+  
+  /* button */
+  .btn{
+    display:inline-block;
+    text-decoration:none;
+    font-weight:700;
+    font-size:12px;
+    padding:8px 18px;
+    border-radius:2px;
+    background:var(--white);
+    color:var(--navy);
+    text-transform:uppercase;
+    letter-spacing:1px;
+    box-shadow:0 2px 6px rgba(2,6,23,0.12);
+  }
+  
+  /* footer note */
+  .note{
+    margin-top:20px;
+    text-align:center;
+  }
+  .note p{
+    display:inline-block;
+    background:var(--navy);
+    color:var(--white);
+    padding:12px 40px;
+    border-radius:2px;
+    font-weight:700;
+    letter-spacing:1px;
+  }
+  
+  /* Responsive: stack columns on small screens */
+  @media (max-width:980px){
+    .team-grid{ grid-template-columns:repeat(2, 1fr); gap:28px; }
+    .bio{ max-width:260px; }
+  }
+  @media (max-width:640px){
+    .team-grid{ grid-template-columns:1fr; gap:28px; }
+    .card-body{ min-height:260px; }
+    .photo-wrap{ left:32px; transform:none; }
+    .member-card{ padding-top:52px; }
+    .card-body::before{ left:auto; right:-18px; } /* avoid overflow issues */
+  }
+  .gallery{
+    display: flex;
+    gap: var(--gap);
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap; /* wraps on small screens */
+  }
+  
+  /* each image block */
+  .image-box{
+    background: #fff;
+    padding: 12px;
+    border-radius: 8px;
+    box-shadow: 0 6px 18px rgba(15,15,15,0.06);
+    text-align: center;
+    width: var(--img-width);
+  }
+  
+  /* images scale nicely and keep aspect ratio */
+  .image-box img{
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 6px;
+    object-fit: cover;
+  }
+  
+  /* small caption under each image */
+  .caption{
+    margin-top: 8px;
+    font-size: 14px;
+    color: #555;
+  }
+  
+  /* responsive: on very small screens make them full-width */
+  @media (max-width: 480px){
+    :root{ --img-width: 100%; }
+    .gallery{ padding: 0 8px; gap: 12px; }
+    .image-box{ padding: 10px; }
+  }
